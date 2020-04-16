@@ -27,3 +27,22 @@ SELECT * FROM usuarios WHERE email LIKE '%gmail%';
 - BETWEEN
 SELECT * FROM usuarios WHERE data_nascimento BETWEEN '2016-12-01' AND '2017-03-15';
 
+- IN
+SELECT * FROM usuarios WHERE id IN (2, 3, 5, 7, 11);
+
+- ALIAS (será criado uma coluna temporária chamada soma onde exibirá o valor do id + 10)
+SELECT *, (id+10) as soma FROM usuarios
+
+- HAVING (para filtrar alias)
+SELECT *, (id + 10) as soma FROM usuarios HAVING soma < 12;
+
+- ORDER BY (ASC, DESC)
+SELECT * FROM usuarios ORDER BY nome DESCS
+SELECT * FROM usuarios WHERE nome LIKE '%Oliveira%' ORDER BY nome ASC;
+
+
+- LIMIT (SEMPRE NO FINAL DA QUERY)
+SELECT id FROM usuarios LIMIT 1,3; //SALTA O PRIMEIRO RESULTADO E EXIBE MAIS TRÊS
+
+- GROUPY BY
+SELECT COUNT(*) as contagem, faixa_salarial FROM  usuarios GROUP BY faixa_salarial
