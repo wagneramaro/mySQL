@@ -46,3 +46,8 @@ SELECT id FROM usuarios LIMIT 1,3; //SALTA O PRIMEIRO RESULTADO E EXIBE MAIS TRÃ
 
 - GROUPY BY
 SELECT COUNT(*) as contagem, faixa_salarial FROM  usuarios GROUP BY faixa_salarial
+
+- JOIN (INNER, LEFT, RIGHT)
+SELECT usuarios.nome, faixas.titulo FROM usuarios INNER JOIN faixas ON faixas.id = usuarios.faixa_salarial;
+
+
