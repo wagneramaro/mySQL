@@ -50,4 +50,7 @@ SELECT COUNT(*) as contagem, faixa_salarial FROM  usuarios GROUP BY faixa_salari
 - JOIN (INNER, LEFT, RIGHT)
 SELECT usuarios.nome, faixas.titulo FROM usuarios INNER JOIN faixas ON faixas.id = usuarios.faixa_salarial;
 
+-SUBCONSULTAS
+SELECT usuarios.nome, (select faixas.titulo from faixas where faixas.id = usuarios.faixa_salarial) as faixa FROM usuarios;
+
 
