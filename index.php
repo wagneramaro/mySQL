@@ -21,3 +21,9 @@ SELECT * FROM usuarios WHERE id = 1 OR id = 3;
 SELECT * FROM usuarios WHERE nome = 'fulano' AND idade = '31';
 SELECT * FROM usuarios WHERE (nome = 'fulano' AND senha = '432') OR email = 'teste@teste.com';
 
+- LIKE (usado em buscas onde se sabe apenas parte da informação)
+SELECT * FROM usuarios WHERE email LIKE '%gmail%';
+
+- BETWEEN
+SELECT * FROM usuarios WHERE data_nascimento BETWEEN '2016-12-01' AND '2017-03-15';
+
